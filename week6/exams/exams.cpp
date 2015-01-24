@@ -13,10 +13,19 @@ double average(vector< double > &ar)
 	return sum / ar.size();
 }
 
-vector< double > solve(vector< double > &exams, vector< pair<int, double> > &changes, vector< pair<int, int> > &available)
+vector< double > solve(vector< double > &exams, vector< pair<int, double> > &changes, vector< pair<int, int> > &available, int start, int end)
 {
 	vector< double > results;
+	if (start == end) {
+		return exams;
+	}
 
+	int medium = start + (end - start) / 2;
+	vector< double> res1 = solve(exams, changes, available, start, medium); 
+	vector< double> res2 = solve(exams, changes, available, medium, end); 
+
+	for  
+	
 	for (int i = 0; i <= changes.size(); ++i) {
 		
 		vector< double > grades;
